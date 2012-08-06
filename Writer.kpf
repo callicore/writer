@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project id="1b4ff462-b38c-4b27-9cab-21a0d9bd8a13" kpf_version="4" name="Writer.kpf">
+<file id="64ef5d9a-f919-4699-8664-1561a7f866ee" idref="1b4ff462-b38c-4b27-9cab-21a0d9bd8a13" name="writer.phpg" url="writer.phpg">
+</file>
+<file id="c71447d6-06c3-41cc-a575-b64cb6f1c25c" idref="1b4ff462-b38c-4b27-9cab-21a0d9bd8a13" name="writer.php" url="writer.php">
+</file>
+<preference-set idref="1b4ff462-b38c-4b27-9cab-21a0d9bd8a13">
+  <string id="import_exclude_matches">*.*~;*.bak;*.tmp;CVS;.#*;*.pyo;*.pyc;.svn;_svn;*%*;tmp*.html;.DS_Store</string>
+  <string id="import_include_matches"></string>
+  <boolean id="import_live">0</boolean>
+  <boolean id="import_recursive">0</boolean>
+  <string id="import_type">makeFlat</string>
+  <string id="lastTestPlanName_pref">New test plan #1</string>
+  <string id="phpExtraPaths"></string>
+<preference-set id="testPlans">
+<preference-set id="New test plan #1">
+  <string id="command_line"></string>
+  <string relative="url" id="directory"></string>
+  <string id="language">Perl - TAP (*.t)</string>
+</preference-set>
+</preference-set>
+</preference-set>
+</project>
