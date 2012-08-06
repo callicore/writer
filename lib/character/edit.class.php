@@ -10,7 +10,7 @@
  * @copyright    Elizabeth Smith (c)2006
  * @link         http://callicore.net/writer
  * @license      http://www.opensource.org/licenses/gpl-license.php GPL
- * @version      $Id: edit.class.php 146 2007-06-11 13:19:18Z emsmith $
+ * @version      $Id: edit.class.php 28 2006-11-30 15:15:17Z emsmith $
  * @since        Php 5.2.0
  * @package      callicore
  * @subpackage   writer

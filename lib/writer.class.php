@@ -11,7 +11,7 @@
  * @copyright    Elizabeth Smith (c)2006
  * @link         http://callicore.net/desktop/programs/writer
  * @license      http://www.opensource.org/licenses/gpl-license.php GPL
- * @version      $Id: writer.class.php 146 2007-06-11 13:19:18Z emsmith $
+ * @version      $Id: writer.class.php 150 2007-06-13 02:07:50Z emsmith $
  * @since        Php 5.2.0
  * @package      callicore
  * @subpackage   writer
@@ -37,6 +37,20 @@ class CC_Writer extends CC_Main
 	public function __construct()
 	{
 		parent::__construct();
+		
+		//var_dump($this->window);
+		$action = CC_Actions::instance();
+		$quit = $action->get_action('help', 'website');
+		$new = $quit->create_menu_item();
+		$image = $new->get_children();
+		$image = $image[1];
+		echo $image;
+		$image->reparent($this->vbox);
+		$icon = $quit->create_icon(CC::$DND);
+		$this->vbox->add($icon);
+		$quit = $action->get_action('file', 'quit');
+		$icon = $quit->create_icon(CC::$DND);
+		$this->vbox->add($icon);
 		$this->show_all();
 	}
 

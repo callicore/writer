@@ -12,7 +12,7 @@
  * @copyright    Elizabeth Smith (c)2006
  * @link         http://callicore.net/writer
  * @license      http://www.opensource.org/licenses/gpl-license.php GPL
- * @version      $Id: window.class.php 146 2007-06-11 13:19:18Z emsmith $
+ * @version      $Id: window.class.php 59 2006-12-04 15:35:36Z emsmith $
  * @since        Php 5.2.0
  * @package      callicore
  * @subpackage   writer
