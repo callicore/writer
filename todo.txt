@@ -1,0 +1,48 @@
+Writer todo: 1.0
+
+Import/Export formats
+.cwp (callicore writer project)
+.txt (plain text...duh)
+.sql (standard query language)
+
+Basic plain text renderer for printing
+
+One project at a time - chapters, scenes, notes, characters, places, metadata for each
+
+And don't forget to add "meta data options" editors
+
+After 1.0 Release
+1. Edit Menu Support
+   a) Undo/Redo
+   b) Select All/None
+   c) Clear
+   d) Cut/Copy/Paste
+   e) Find/Replace/Goto
+
+2. Help Menu Support
+   a) Editor integration
+   b) Articles/Tutorials integration
+   c) bugs/support/updates integration
+
+3. Extended Printing - may have to wait for cairo and 2.10
+
+4. Windows native printing and file dialog handling - may have to write own c extension for that...ewww
+
+5. Import/Export Formats
+   a) rtf (rich text format)
+   b) open document
+   c) doc/docx (only on windows through com)
+   d) pdf
+   e) html
+   f) openoffice and derivatives
+      1) StarOffice (.sdw)
+      2) OpenOffice 1 (.sxw)
+      3) OpenOffice 2 (.odt)
+      4) NeoOffice (.sxw)
+   g) esoteric word processors
+      1) WordPerfect (.wp, .wpd)
+      2) Abiword (.abw)
+      3) Microsoft Works (.wps)
+   h) generic csv
+
+6. Grammar/Spelling tools
