@@ -1,27 +1,47 @@
+#!/usr/bin/env php
 <?php
 /**
- * writer.phpg - bootstrap file
+ * writer.phpg - \Callicore\Writer startup file
  *
  * This is released under the MIT, see license.txt for details
  *
- * @author       Elizabeth Smith <auroraeosrose@php.net>
- * @copyright    Elizabeth Smith (c)2009
+ * @author       Elizabeth M Smith <auroraeosrose@gmail.com>
+ * @copyright    Elizabeth M Smith (c) 2009-2012
  * @link         http://callicore.net
  * @license      http://www.opensource.org/licenses/mit-license.php MIT
- * @version      $Id: writer.phpg 23 2009-04-26 02:24:03Z auroraeosrose $
- * @since        Php 5.3.0
+ * @since        Php 5.4.0 GTK 2.24.0
  * @package      callicore
  * @subpackage   writer
  * @filesource
  */
 
-// base callicore library
-include __DIR__ . '/../lib/Lib.php';
+/**
+ * Namespace for application
+ */
+namespace Callicore\Writer;
 
-// writer application library
-include 'Writer.php';
+/**
+ * Figure out our library location
+ */
+defined('CALLICORE_LIB') || define('CALLICORE_LIB', (getenv('CALLICORE_LIB') ? getenv('CALLICORE_LIB') : __DIR__ . DIRECTORY_SEPARATOR . 'callicore' . DIRECTORY_SEPARATOR));
 
-// application class
-use \Callicore\Writer\Manager;
-$writer = new Manager();
-$writer->run();
+/**
+ * Figure out our app location
+ */
+defined('CALLICORE_WRITER') || define('CALLICORE_WRITER', (getenv('CALLICORE_WRITER') ? getenv('CALLICORE_WRITER') : __DIR__ . DIRECTORY_SEPARATOR));
+
+/**
+ * include our Callicore library
+ */
+include CALLICORE_LIB . 'callicore.php';
+
+/**
+ * include our writer application
+ */
+include CALLICORE_WRITER . 'writer.php';
+
+ /**
+ * Create our application and run it
+ */
+ $application = new Application;
+ $application->run();

@@ -1,65 +1,25 @@
 <?php
-/**
- * Twitter.php - \Callicore\Twitter base namespace
+ /**
+ * writer.php - include all file for writer, use instead of phar for development
  *
  * This is released under the MIT, see license.txt for details
  *
- * @author       Elizabeth Smith <auroraeosrose@php.net>
- * @copyright    Elizabeth Smith (c)2009
+ * @author       Elizabeth M Smith <auroraeosrose@gmail.com>
+ * @copyright    Elizabeth M Smith (c) 2009-2012
  * @link         http://callicore.net
  * @license      http://www.opensource.org/licenses/mit-license.php MIT
- * @version      $Id: Writer.php 23 2009-04-26 02:24:03Z auroraeosrose $
- * @since        Php 5.3.0
+ * @since        Php 5.4.0 GTK 2.24.0
  * @package      callicore
- * @subpackage   lib
+ * @subpackage   writer
  * @filesource
  */
 
 /**
- * Namespace for application is actually Callicore\Writer
+ * Figure out our app location
  */
-namespace Callicore\Writer;
+defined('CALLICORE_WRITER') || define('CALLICORE_WRITER', (getenv('CALLICORE_WRITER') ? getenv('CALLICORE_WRITER') : __DIR__ . DIRECTORY_SEPARATOR));
 
 /**
- * Current Writer Application verion
- * @const string
+ * Include all todo items
  */
-const VERSION = '0.1.0-dev';
-
-/**
- * autoload implementation for application
- *
- * @param string $class class to include
- * @return bool
- */
-function autoload($class) {
-    // only Callicore\Writer classes
-    if (strncmp('Callicore\Writer', $class, 13) !== 0) {
-        return false;
-    }
-
-    // split on namespace and pop off callicore/twitter
-    $array = explode('\\', $class);
-    unset($array[0], $array[1]);
-
-    // create partial filename
-    $file = array_pop($array);
-    // if we have no path left, add it back
-    if (empty($array)) {
-        $path = '';
-    } else {
-        $path = implode('/', $array);
-    }
-    $filename = __DIR__ . '/' . $path . '/' . $file . '.php';
-    if (!file_exists($filename)) {
-        trigger_error("File $filename could not be loaded", E_USER_WARNING);
-        return false;
-    }
-    include $filename;
-    return true;
-}
-
-/**
- * register the autoload
- */
-\spl_autoload_register(__NAMESPACE__ . '\autoload');
+include CALLICORE_WRITER . 'app' . DIRECTORY_SEPARATOR . 'Application.php';
